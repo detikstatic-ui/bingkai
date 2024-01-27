@@ -11,6 +11,7 @@ const CBdetikNetwork = () => {
       time: "8 menit yang lalu",
       label:
         "https://cdn.cnnindonesia.com/cnnid/images/logo/logo_Detik.png?v=10.13.7",
+      labelSizes: { width: 340, height: 65 },
       href: "#",
     },
     {
@@ -19,6 +20,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.cnnindonesia.com/cnnid/images/logo/logo_CNBC.png?v=10.13.7",
+      labelSizes: { width: 242, height: 210 },
       href: "#",
     },
     {
@@ -28,6 +30,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.detik.net.id/libs/detik-vertical/images/logo/logo_Insertlive.png?v=0.0.4",
+      labelSizes: { width: 200, height: 80 },
       href: "#",
     },
     {
@@ -37,6 +40,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.detik.net.id/libs/detik-vertical/images/logo/logo_Beautynesia.png?v=0.0.4",
+      labelSizes: { width: 200, height: 52 },
       href: "#",
     },
     {
@@ -45,6 +49,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.detik.net.id/libs/detik-vertical/images/logo/logo_FemaleDaily.png?v=0.0.4",
+      labelSizes: { width: 200, height: 35 },
       href: "#",
     },
     {
@@ -53,6 +58,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.detik.net.id/libs/detik-vertical/images/logo/logo-cxo.png?v=0.0.4",
+      labelSizes: { width: 78, height: 43 },
       href: "#",
     },
     {
@@ -61,6 +67,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.detik.net.id/libs/detik-vertical/images/logo/logo_Wolipop.png?v=0.0.4",
+      labelSizes: { width: 544, height: 156 },
       href: "#",
     },
 
@@ -71,6 +78,7 @@ const CBdetikNetwork = () => {
       time: "Rabu, 28 Nov 2018 13:14 WIB",
       label:
         "https://cdn.cnnindonesia.com/cnnid/images/logo/logo_HaiBunda.png?v=10.13.7",
+      labelSizes: { width: 200, height: 30 },
       href: "#",
     },
   ]
@@ -93,8 +101,8 @@ const CBdetikNetwork = () => {
                 className="absolute right-2 top-1.5 size-auto max-h-6 max-w-20 object-contain"
                 src={data.label}
                 alt="image alt"
-                width={80}
-                height={24}
+                width={data.labelSizes.width}
+                height={data.labelSizes.height}
               />
             </Link>
             <div className="flex flex-col gap-1.5">

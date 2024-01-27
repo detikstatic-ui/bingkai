@@ -68,9 +68,6 @@
 
     --radius: 0.5rem;
   }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
@@ -81,6 +78,7 @@
       "calt" 1;
   }
 }
+
 @layer components {
   .hl-gradient {
     background: linear-gradient(
@@ -127,4 +125,13 @@
     display: grid;
     grid-template-columns: inherit;
   }
+}
+
+.swiper {
+  --swiper-navigation-size: 18px;
+  --swiper-navigation-color: #000;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  @apply rounded-full p-5 bg-white shadow border;
 }

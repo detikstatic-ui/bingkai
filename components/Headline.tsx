@@ -1,18 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { Button } from "./ui/button"
-
 const Headline = () => {
   return (
     <section className="bg-hlmobilegradient sm:bg-hldesktopgradient full-width py-9">
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
         <Image
-          className="w-full object-contain sm:order-2 sm:w-1/2"
+          className="w-full object-contain sm:order-2 sm:w-1/2 lg:w-3/5"
           src="/images/hero-image.webp"
           alt="Bingkai.id"
           width={626}
           height={475}
+          priority
         />
 
         <div className="flex flex-col items-start justify-start gap-3 sm:max-w-96 sm:justify-center">
