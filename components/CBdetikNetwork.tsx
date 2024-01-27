@@ -99,7 +99,7 @@ const CBdetikNetwork = () => {
             </Link>
             <div className="flex flex-col gap-1.5">
               <Link href="#">
-                <h3 className="line-clamp-4 text-sm font-semibold leading-tight tracking-wider sm:text-base sm:leading-tight">
+                <h3 className="line-clamp-4 text-sm font-semibold leading-tight sm:text-base sm:leading-tight">
                   {data.title}
                 </h3>
               </Link>
