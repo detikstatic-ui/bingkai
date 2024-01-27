@@ -11,6 +11,8 @@ const Footer = () => {
   }
   const updatedMainNav = [...siteConfig.mainNav, additionalLink]
 
+  const currentYear = new Date().getFullYear()
+
   return (
     <div className="full-width relative isolate mt-12 bg-white py-10 sm:px-0 sm:py-7">
       <div
@@ -83,7 +85,7 @@ const Footer = () => {
           aria-hidden="true"
         />
         <div className="flex flex-col gap-2 text-center text-sm text-bingkai sm:text-right lg:flex-row">
-          <div>Copyright @ 2023 detikevent. All right reserved.</div>
+          <div>Copyright @ {currentYear} detikevent. All right reserved.</div>
           <div>
             <Link href="#">Kotak Pos</Link> / <Link href="#">Iklan</Link> /{" "}
             <Link href="#">Privacy</Link> / <Link href="#">Disclaimer</Link>
