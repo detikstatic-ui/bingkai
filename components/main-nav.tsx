@@ -1,10 +1,11 @@
 import * as React from "react"
+import Image from "next/image"
 import Link from "next/link"
+import logo from "@/public/images/logo.png"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -12,13 +13,17 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div className="flex w-full items-center gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <Image
+          src={logo}
+          className="h-8 w-auto lg:h-12"
+          alt={siteConfig.name}
+          width={200}
+        />
       </Link>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="ml-auto mr-6 hidden gap-6 border-r-2 border-bingkai pr-6 lg:flex">
           {items?.map(
             (item, index) =>
               item.href && (
@@ -26,7 +31,7 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "text-muted-foreground flex items-center text-sm font-medium",
+                    "flex items-center text-lg font-bold leading-tight text-bingkai",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

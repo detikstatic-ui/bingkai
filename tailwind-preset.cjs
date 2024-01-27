@@ -154,6 +154,13 @@ module.exports = {
           light4: "#5F6CC3",
           light5: "#AFB5E1",
         },
+        bingkai: {
+          DEFAULT: "#171313",
+          orange: "#FF781A",
+          darkorange: "#EE6112",
+          yellow: "#F8DB53",
+          gray: "#9B9B9B",
+        },
         facebook: "#3d5a99",
         twitter: "#000000",
         linkedin: "#007bb6",
@@ -169,6 +176,10 @@ module.exports = {
       backgroundImage: {
         instagramgradient:
           "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)",
+        hlmobilegradient:
+          "linear-gradient(329deg, rgba(247, 238, 29, 0.20) 18.84%, rgba(255, 168, 0, 0.20) 83.36%)",
+        hldesktopgradient:
+          "linear-gradient(8deg,rgba(255, 230, 0, 0.2) 6.36%,rgba(255, 138, 0, 0.2) 96.67%)",
       },
     },
   },

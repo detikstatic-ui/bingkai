@@ -5,6 +5,7 @@ import { Metadata, Viewport } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import Footer from "@/components/Footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -40,14 +41,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "bg-background min-h-screen font-sans antialiased",
+            "min-h-screen bg-white-dark1 font-sans antialiased",
             fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
+            <div className="content-grid relative min-h-screen auto-rows-max">
               <SiteHeader />
-              <div className="flex-1">{children}</div>
+              {children}
+              <Footer />
             </div>
             <TailwindIndicator />
           </ThemeProvider>
