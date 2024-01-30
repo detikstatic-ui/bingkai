@@ -14,7 +14,7 @@ const CBCarousel = () => {
         background: "linear-gradient(180deg, #DB4200 0%, #FFB800 100%)",
       }}
     >
-      <div className="breakout grid grid-cols-1 gap-7 py-11 sm:flex">
+      <div className="breakout grid grid-cols-1 gap-7 py-11 lg:flex">
         <div className="flex shrink-0 flex-col items-start gap-4 bg-white px-10 py-16">
           <h2 className="text-4xl font-bold text-bingkai">
             Bingkai Hadir
@@ -29,7 +29,7 @@ const CBCarousel = () => {
             <Link href="/bingkai">Eksplor Bingkai</Link>
           </Button>
         </div>
-        <div className="min-w-0">
+        <div className="w-full min-w-0 overflow-hidden xl:max-h-96">
           <Swiper />
         </div>
       </div>

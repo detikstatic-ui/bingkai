@@ -2,12 +2,70 @@ import CardBingkai from "./CardBingkai"
 import CBTitle from "./CBTitle"
 
 const CBTerbaru = () => {
+  const terbaru = [
+    {
+      imgSrc: "/images/bingkai-1.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Hari Kemerdekaan ke-77 Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+      imgSrc: "/images/han-1.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Hari Anak Nasional 2023",
+    },
+    {
+      imgSrc: "/images/tahunbaruislam-3.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Tahun Baru Islam 1445 H",
+    },
+    {
+      imgSrc: "/images/han-2.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Hari Anak Nasional 2023 Lorem Ipsum Dolor Sit Amet",
+    },
+    {
+      imgSrc: "/images/transmedia-2.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "HUT Transmedia 2 Dekade",
+    },
+    {
+      imgSrc: "/images/tahunbaruislam-1.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Tahun Baru Islam 1445 H",
+    },
+    {
+      imgSrc: "/images/tahunbaruislam-4.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+      title: "Tahun Baru Islam 1445 H",
+    },
+    {
+      imgSrc: "/images/bingkai-3.png",
+      href: "#",
+      views: 100,
+      downloads: 20,
+    },
+  ]
+
   return (
     <div className="flex flex-col gap-3 py-12">
       <CBTitle title="Terbaru" href="#" />
       <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-5 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-x-10 sm:gap-y-12">
-        {[...Array(8)].map((_, i) => (
-          <CardBingkai key={i} />
+        {terbaru.map((data, i) => (
+          <CardBingkai key={i} {...data} />
         ))}
       </div>
     </div>

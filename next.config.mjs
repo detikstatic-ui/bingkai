@@ -15,7 +15,19 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "cdn.detik.net.id",
+        port: "",
+        pathname: "**/*",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.cnnindonesia.com",
+        port: "",
+        pathname: "**/*",
+      },
+      {
+        protocol: "https",
+        hostname: "editorial.femaledaily.com",
         port: "",
         pathname: "**/*",
       },

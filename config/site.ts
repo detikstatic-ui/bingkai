@@ -10,19 +10,19 @@ export const siteConfig = {
     },
     {
       title: "Create Bingkai",
-      href: "/",
+      href: "/bingkai",
     },
     {
       title: "Watermark",
-      href: "/",
+      href: "/watermark",
     },
     {
       title: "Eksplor",
-      href: "/",
+      href: "/eksplor",
     },
     {
       title: "FAQ",
-      href: "/",
+      href: "/faq",
     },
   ],
   links: [

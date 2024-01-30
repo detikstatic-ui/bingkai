@@ -37,20 +37,19 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="id" suppressHydrationWarning className="scroll-smooth">
         <head />
         <body
           className={cn(
-            "min-h-screen bg-white-dark1 font-sans antialiased",
+            "content-grid relative auto-rows-max bg-white-dark1 font-sans antialiased",
             fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="content-grid relative min-h-screen auto-rows-max">
-              <SiteHeader />
-              {children}
-              <Footer />
-            </div>
+            <SiteHeader />
+            <div className="full-width content-grid min-h-dvh">{children}</div>
+            <Footer />
+
             <TailwindIndicator />
           </ThemeProvider>
         </body>

@@ -14,7 +14,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className="full-width relative isolate mt-12 bg-white py-10 sm:px-0 sm:py-7">
+    <footer className="full-width relative isolate mt-12 bg-white py-10 sm:px-0 sm:py-7">
       <div
         className="full-width absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#ffb54c] via-[#ed131b] to-[#ffb54c]"
         role="presentation"
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 export default Footer

@@ -8,27 +8,42 @@ import { Button } from "./ui/button"
 
 type CardBingkaiProps = {
   className?: string
-  imgSrc?: string
   titleClass?: string
   btnClass?: string
+  imgSrc?: string
+  href?: string
+  views?: number
+  downloads?: number
+  title?: string
 }
 const CardBingkai = ({
   imgSrc = "/images/bingkai-1.png",
+  href = "#",
+  views = 100,
+  downloads = 20,
   className,
   titleClass,
   btnClass,
+  title = "Hari Kemerdekaan ke-77",
 }: CardBingkaiProps) => {
   return (
     <div className={cn("flex flex-col items-start gap-2.5", className)}>
-      <Image
-        src={imgSrc}
-        alt="Bingkai template 1"
-        width={500}
-        height={500}
-        className="aspect-square w-full object-cover"
-      />
-      <h2 className={cn("text-xl font-bold", titleClass)}>
-        Hari Kemerdekaan ke-77
+      <Link href={href}>
+        <Image
+          src={imgSrc}
+          alt="Bingkai template 1"
+          width={500}
+          height={500}
+          className="aspect-square w-full object-cover"
+        />
+      </Link>
+      <h2
+        className={cn(
+          "line-clamp-2 text-balance text-xl font-bold",
+          titleClass
+        )}
+      >
+        {title}
       </h2>
       <Button
         asChild
@@ -37,14 +52,14 @@ const CardBingkai = ({
           btnClass
         )}
       >
-        <Link href="/bingkai/1">
+        <Link href={href}>
           <Eye />
-          100 Views
+          {views} Views
         </Link>
       </Button>
       <span className="flex items-center gap-1 font-semibold text-black-light2">
         <Download className="size-3.5 text-black" />
-        20 downloads
+        {downloads} downloads
       </span>
     </div>
   )
