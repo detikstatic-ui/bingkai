@@ -3,7 +3,9 @@ import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { MainNav } from "@/components/main-nav"
 
-import { Icons } from "./icons"
+import MenuPopup from "./MenuPopup"
+import SearchPopup from "./SearchPopup"
+import UserLogin from "./UserLogin"
 
 export function SiteHeader() {
   return (
@@ -12,15 +14,13 @@ export function SiteHeader() {
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center gap-4">
-            <Link href="#" className="max-lg:hidden">
-              <Icons.user className="size-6" />
-            </Link>
-            <Link href="#">
-              <Icons.search className="size-6" />
-            </Link>
-            <Link href="#" className="lg:hidden">
-              <Icons.menu className="size-6" />
-            </Link>
+            <div className="max-lg:hidden">
+              <UserLogin />
+            </div>
+            <SearchPopup />
+            <div className="lg:hidden">
+              <MenuPopup />
+            </div>
           </nav>
         </div>
       </div>

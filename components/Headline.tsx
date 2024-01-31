@@ -1,13 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
+import heroImage from "@/public/images/hero-image.webp"
 
-const Headline = () => {
+const Headline = async () => {
   return (
-    <section className="bg-hlmobilegradient sm:bg-hldesktopgradient full-width py-9">
+    <section className="full-width bg-hlmobilegradient py-9 sm:bg-hldesktopgradient">
       <div className="flex flex-col gap-4 sm:flex-row sm:justify-between">
         <Image
           className="w-full object-contain sm:order-2 sm:w-1/2 lg:w-3/5"
-          src="/images/hero-image.webp"
+          src={heroImage}
           alt="Bingkai.id"
           width={626}
           height={475}

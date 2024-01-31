@@ -6,6 +6,25 @@ import { cn } from "@/lib/utils"
 
 import { Button } from "./ui/button"
 
+const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#e5e7eb" offset="20%" />
+      <stop stop-color="#f3f4f6" offset="50%" />
+      <stop stop-color="#e5e7eb" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#e5e7eb" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str: string) =>
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str)
+
 type CardBingkaiProps = {
   className?: string
   titleClass?: string
@@ -28,13 +47,14 @@ const CardBingkai = ({
 }: CardBingkaiProps) => {
   return (
     <div className={cn("flex flex-col items-start gap-2.5", className)}>
-      <Link href={href}>
+      <Link href={href} className="relative isolate aspect-square w-full">
         <Image
           src={imgSrc}
-          alt="Bingkai template 1"
-          width={500}
-          height={500}
-          className="aspect-square w-full object-cover"
+          alt={title}
+          className="w-full object-cover"
+          fill
+          sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+          placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(245, 245))}`}
         />
       </Link>
       <h2

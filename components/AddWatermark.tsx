@@ -17,12 +17,15 @@ import {
 } from "@/components/ui/select"
 import { Slider } from "@/components/ui/slider"
 
+import { Icons } from "./icons"
+
 const AddWatermark = () => {
   const [fileName, setFileName] = useState("Pilih Gambar")
   const [color, setColor] = useState("#AA248C")
   const [rotate, setRotate] = useState(180)
   const [opacity, setOpacity] = useState(100)
   const [previewImage, setPreviewImage] = useState("")
+  const [watermarkType, setWatermarkType] = useState("text")
 
   const hiddenFileInput = useRef<HTMLInputElement>(null)
 
@@ -83,7 +86,10 @@ const AddWatermark = () => {
 
         <div className="grid w-full items-center gap-1.5">
           <Label className="text-lg font-semibold">Pilih Watermark</Label>
-          <Select onValueChange={(value) => console.log(value)}>
+          <Select
+            onValueChange={(value) => setWatermarkType(value)}
+            defaultValue={watermarkType}
+          >
             <SelectTrigger className="rounded-none">
               <SelectValue placeholder="Pilih Watermark.." />
             </SelectTrigger>
@@ -96,22 +102,48 @@ const AddWatermark = () => {
           </Select>
         </div>
 
-        <div className="grid w-full items-center gap-1.5">
-          <Label className="text-lg font-semibold">Font</Label>
-          <Select onValueChange={(value) => console.log(value)}>
-            <SelectTrigger className="rounded-none">
-              <SelectValue placeholder="Pilih Font.." />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectItem value="helvetica">Helvetica</SelectItem>
-                <SelectItem value="arial">Arial</SelectItem>
-                <SelectItem value="montserrat">Montserrat</SelectItem>
-                <SelectItem value="opensans">Open Sans</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
+        {watermarkType === "text" ? (
+          <div className="grid w-full items-center gap-1.5">
+            <Label className="text-lg font-semibold">Font</Label>
+            <Select onValueChange={(value) => console.log(value)}>
+              <SelectTrigger className="rounded-none">
+                <SelectValue placeholder="Pilih Font.." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectItem value="helvetica">Helvetica</SelectItem>
+                  <SelectItem value="arial">Arial</SelectItem>
+                  <SelectItem value="montserrat">Montserrat</SelectItem>
+                  <SelectItem value="opensans">Open Sans</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+        ) : (
+          <div className="grid w-full items-center gap-1.5">
+            <Label className="text-lg font-semibold">Tile</Label>
+            <div className="flex items-center">
+              {[...Array(3)].map((_, i) => (
+                <label className="grid size-9 place-content-center border border-gray-light3 bg-white has-[input:checked]:bg-gray-light4">
+                  <input
+                    type="radio"
+                    name="tile"
+                    id={`tile-${i + 1}`}
+                    className="hidden"
+                    defaultChecked={i === 0 ? true : false}
+                  />
+                  {i === 0 ? (
+                    <Icons.tile1 />
+                  ) : i === 1 ? (
+                    <Icons.tile2 />
+                  ) : (
+                    <Icons.tile3 />
+                  )}
+                </label>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="grid w-full items-center gap-1.5">
           <Label className="text-lg font-semibold">Posisi</Label>
@@ -147,20 +179,24 @@ const AddWatermark = () => {
           </Select>
         </div>
 
-        <div className="grid w-full items-center gap-1.5">
-          <Label className="text-lg font-semibold">Warna</Label>
-          <div className="flex items-center gap-5">
-            <Input
-              type="color"
-              defaultValue={"#AA248C"}
-              className="size-11 shrink-0 rounded-none border-0 p-0"
-              onChange={(event) => setColor(event.target.value)}
-            />
-            <div className="flex h-10 w-full items-center justify-between rounded-none border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-              {color}
+        {watermarkType === "text" ? (
+          <div className="grid w-full items-center gap-1.5">
+            <Label className="text-lg font-semibold">Warna</Label>
+            <div className="flex items-center gap-5">
+              <Input
+                type="color"
+                defaultValue={"#AA248C"}
+                className="size-11 shrink-0 rounded-none border-0 p-0"
+                onChange={(event) => setColor(event.target.value)}
+              />
+              <div className="flex h-10 w-full items-center justify-between rounded-none border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                {color}
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
 
         <div className="grid w-full items-center gap-1.5">
           <Label className="text-lg font-semibold">Rotasi</Label>

@@ -1,9 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { addBlurredDataUrls } from "@/lib/getLocalBase64"
+
 import CBTitle from "./CBTitle"
 
-const CBdetikNetwork = () => {
+const CBdetikNetwork = async () => {
   const datas = [
     {
       title: "Anggota KPU Padangsidimpuan Kena OTT Saber Pungli Polda Sumut",
@@ -83,19 +85,26 @@ const CBdetikNetwork = () => {
     },
   ]
 
+  const dataWithBlurred = addBlurredDataUrls(datas)
+
   return (
     <div className="mt-8">
       <CBTitle title="detikNetwork" href="#" />
       <div className="mt-3 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-5 gap-y-4 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-8">
-        {datas.map((data, i) => (
+        {(await dataWithBlurred).map((data, i) => (
           <div key={i} className="flex flex-col gap-3">
-            <Link href={data.href} className="relative">
+            <Link
+              href={data.href}
+              className="relative isolate aspect-video w-full"
+            >
               <Image
-                className="aspect-video w-full object-cover"
+                className="size-full object-cover"
                 src={data.img}
                 alt="image alt"
-                width={245}
-                height={131}
+                fill
+                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                placeholder="blur"
+                blurDataURL={data.blurredData}
               />
               <Image
                 className="absolute right-2 top-1.5 size-auto max-h-6 max-w-20 object-contain"
@@ -111,7 +120,7 @@ const CBdetikNetwork = () => {
                   {data.title}
                 </h3>
               </Link>
-              <time className="text-bingkai-gray line-clamp-2 text-xs font-medium leading-tight">
+              <time className="line-clamp-2 text-xs font-medium leading-tight text-bingkai-gray">
                 {data.time}
               </time>
             </div>

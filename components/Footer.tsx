@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import logo from "@/public/images/logo.png"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -23,7 +24,7 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-between gap-y-6 sm:flex-row">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src={logo}
             width={175}
             height={42}
             alt="logo bingkai.id"
@@ -64,7 +65,7 @@ const Footer = () => {
                     <Link
                       key={index}
                       href={item.href}
-                      className={cn("flex size-8")}
+                      className={cn("flex size-8 overflow-hidden rounded-full")}
                     >
                       <Image
                         src={item.image}
