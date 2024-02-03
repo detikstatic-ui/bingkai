@@ -81,6 +81,7 @@ const AddWatermark = () => {
             className="hidden"
             onChange={handleChange}
             ref={hiddenFileInput}
+            accept="image/*"
           />
         </div>
 

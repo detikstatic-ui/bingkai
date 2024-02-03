@@ -90,7 +90,7 @@ const CBdetikNetwork = async () => {
   return (
     <div className="mt-8">
       <CBTitle title="detikNetwork" href="#" />
-      <div className="mt-3 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-5 gap-y-4 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-8">
+      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-5 gap-y-4 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-8">
         {(await dataWithBlurred).map((data, i) => (
           <div key={i} className="flex flex-col gap-3">
             <Link

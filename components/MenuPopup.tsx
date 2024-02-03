@@ -21,7 +21,7 @@ const MenuPopup = () => {
           <Icons.menu className="col-start-1 row-start-1 size-6 rotate-90 opacity-0 transition-all group-data-[state='closed']:rotate-0 group-data-[state='closed']:opacity-100" />
           <X className="col-start-1 row-start-1 size-6 rotate-0 opacity-0 transition-all group-data-[state='open']:rotate-90 group-data-[state='open']:opacity-100" />
         </MenubarTrigger>
-        <MenubarContent className="min-w-max">
+        <MenubarContent className="min-w-max rounded-none">
           {siteConfig.mainNav.map((item, i) => (
             <MenubarItem
               key={item.title}

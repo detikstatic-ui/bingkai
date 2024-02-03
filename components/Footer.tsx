@@ -25,10 +25,8 @@ const Footer = () => {
         <Link href="/">
           <Image
             src={logo}
-            width={175}
-            height={42}
             alt="logo bingkai.id"
-            className="object-contain"
+            className="h-11 w-auto object-contain"
           />
         </Link>
         {updatedMainNav?.length ? (

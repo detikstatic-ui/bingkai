@@ -47,7 +47,10 @@ const CardBingkai = ({
 }: CardBingkaiProps) => {
   return (
     <div className={cn("flex flex-col items-start gap-2.5", className)}>
-      <Link href={href} className="relative isolate aspect-square w-full">
+      <Link
+        href={href}
+        className="relative isolate aspect-square w-full bg-white"
+      >
         <Image
           src={imgSrc}
           alt={title}
@@ -68,7 +71,7 @@ const CardBingkai = ({
       <Button
         asChild
         className={cn(
-          "inline-flex items-center gap-2 rounded-none px-2.5 py-1.5 text-sm",
+          "inline-flex h-auto items-center gap-2 rounded-none px-2.5 py-1.5 text-sm",
           btnClass
         )}
       >
