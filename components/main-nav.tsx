@@ -35,9 +35,8 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-lg font-bold leading-tight text-bingkai underline decoration-transparent transition-all duration-300 hover:decoration-bingkai-darkorange",
-                    checkActivePath(item.href) &&
-                      "decoration-bingkai-darkorange"
+                    "flex items-center text-lg font-bold leading-tight text-bingkai transition-all duration-300 hover:text-bingkai-darkorange",
+                    checkActivePath(item.href) && "text-bingkai-darkorange"
                   )}
                 >
                   {item.title}

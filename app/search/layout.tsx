@@ -3,8 +3,8 @@ interface EksplorLayoutProps {
 }
 const EksplorLayout = ({ children }: EksplorLayoutProps) => {
   return (
-    <div className="flex flex-col gap-8 pt-14 sm:gap-11">
-      <h1 className="text-5xl font-bold">Eksplor</h1>
+    <div className="flex flex-col gap-7 pt-7 sm:gap-11 md:pt-14">
+      <h1 className="text-xl font-bold md:text-5xl">Hasil Pencarian</h1>
       {children}
     </div>
   )

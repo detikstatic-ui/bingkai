@@ -62,7 +62,7 @@ const CardBingkai = ({
       </Link>
       <h2
         className={cn(
-          "line-clamp-2 text-balance text-xl font-bold",
+          "line-clamp-2 text-balance text-base font-bold md:text-xl",
           titleClass
         )}
       >
@@ -71,7 +71,7 @@ const CardBingkai = ({
       <Button
         asChild
         className={cn(
-          "inline-flex h-auto items-center gap-2 rounded-none px-2.5 py-1.5 text-sm",
+          "inline-flex h-auto items-center gap-2 rounded-none px-2.5 py-1 text-xs md:text-sm",
           btnClass
         )}
       >
@@ -80,7 +80,7 @@ const CardBingkai = ({
           {views} Views
         </Link>
       </Button>
-      <span className="flex items-center gap-1 font-semibold text-black-light2">
+      <span className="flex items-center gap-1 font-semibold text-black-light2 max-sm:text-xs">
         <Download className="size-3.5 text-black" />
         {downloads} downloads
       </span>

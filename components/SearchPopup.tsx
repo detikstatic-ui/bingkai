@@ -32,7 +32,10 @@ const SearchPopup = () => {
         <DialogHeader>
           <DialogTitle>Kata Pencarian</DialogTitle>
         </DialogHeader>
-        <form className="flex items-center space-x-2 border-b">
+        <form
+          action={"/search"}
+          className="flex items-center space-x-2 border-b"
+        >
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
               Link

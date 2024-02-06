@@ -13,26 +13,26 @@ const Eksplor = () => {
   const hariKemerdekaan = [
     {
       imgSrc: "/images/bingkai-2.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Hari Kemerdekaan ke-77 Lorem Ipsum Dolor Sit Amet",
     },
     {
       imgSrc: "/images/bingkai-3.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
     },
     {
       imgSrc: "/images/bingkai-4.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
     },
     {
       imgSrc: "/images/bingkai-1.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
     },
@@ -40,7 +40,7 @@ const Eksplor = () => {
   const hariAnakNasional = [
     {
       imgSrc: "/images/han-1.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Hari Anak Nasional 2023",
@@ -54,14 +54,14 @@ const Eksplor = () => {
     },
     {
       imgSrc: "/images/han-3.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Hari Anak Nasional 2023",
     },
     {
       imgSrc: "/images/han-4.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Hari Anak Nasional 2023",
@@ -70,7 +70,7 @@ const Eksplor = () => {
   const hutTransmedia = [
     {
       imgSrc: "/images/transmedia-1.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "HUT Transmedia 2 Dekade",
@@ -84,14 +84,14 @@ const Eksplor = () => {
     },
     {
       imgSrc: "/images/transmedia-3.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "HUT Transmedia 2 Dekade",
     },
     {
       imgSrc: "/images/transmedia-4.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "HUT Transmedia 2 Dekade",
@@ -100,7 +100,7 @@ const Eksplor = () => {
   const tahunbaruislam = [
     {
       imgSrc: "/images/tahunbaruislam-1.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Tahun Baru Islam 1445 H",
@@ -114,14 +114,14 @@ const Eksplor = () => {
     },
     {
       imgSrc: "/images/tahunbaruislam-3.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Tahun Baru Islam 1445 H",
     },
     {
       imgSrc: "/images/tahunbaruislam-4.png",
-      href: "#",
+      href: "/bingkai",
       views: 100,
       downloads: 20,
       title: "Tahun Baru Islam 1445 H",

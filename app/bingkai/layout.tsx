@@ -37,7 +37,7 @@ const hariKemerdekaan = [
 
 const BingkaiLayout = ({ children }: BingkaiLayoutProps) => {
   return (
-    <div className="flex flex-col gap-11 pt-14">
+    <div className="flex flex-col gap-7 pt-14 md:gap-11">
       {children}
       <CBEksplor
         title="Terbaru"

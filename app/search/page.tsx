@@ -19,10 +19,9 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import CardBingkai from "@/components/CardBingkai"
-import TagCloud from "@/components/TagCloud"
 
-const EksplorDetail = () => {
-  const categoryResults = [
+const Search = () => {
+  const searchResults = [
     {
       imgSrc: "/images/bingkai-2.png",
       href: "/bingkai",
@@ -133,17 +132,20 @@ const EksplorDetail = () => {
       title: "Tahun Baru Islam 1445 H",
     },
   ]
+
   return (
     <>
       <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
-        <h2 className="text-xl font-semibold">
-          <span className="md:hidden">Topik: </span>Hari Kemerdekaan
+        <h2 className="text-lg md:text-xl">
+          Ditemukan 201 hasil pencarian &quot;
+          <span className="font-bold tracking-tighter">Kemerdekaan</span>
+          &quot;,
         </h2>
         <div className="flex items-center gap-3">
           <span className="shrink-0 text-lg font-bold">Urutkan</span>
           <Select>
-            <SelectTrigger className="h-auto w-52 grow rounded-none bg-transparent px-4 py-2 text-black-light1">
-              <SelectValue placeholder="Pilih urutan..." />
+            <SelectTrigger className="w-52 grow rounded-none bg-transparent px-4 py-2 text-black-light1">
+              <SelectValue placeholder="Berdasarkan..." />
             </SelectTrigger>
             <SelectContent className="rounded-none">
               <SelectGroup>
@@ -157,13 +159,8 @@ const EksplorDetail = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <h3 className="shrink-0 text-lg font-bold">Topik lainnya:</h3>
-        <TagCloud />
-      </div>
-
       <div className="grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-5 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-x-10 sm:gap-y-12">
-        {categoryResults.map((data, i) => (
+        {searchResults.map((data, i) => (
           <CardBingkai key={i} {...data} />
         ))}
       </div>
@@ -198,4 +195,4 @@ const EksplorDetail = () => {
     </>
   )
 }
-export default EksplorDetail
+export default Search

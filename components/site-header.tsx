@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site"
 import { MainNav } from "@/components/main-nav"
 
 import MenuPopup from "./MenuPopup"
+import MenuSheet from "./MenuSheet"
 import SearchPopup from "./SearchPopup"
 import UserLogin from "./UserLogin"
 
@@ -19,7 +20,8 @@ export function SiteHeader() {
             </div>
             <SearchPopup />
             <div className="lg:hidden">
-              <MenuPopup />
+              {/* <MenuPopup /> */}
+              <MenuSheet />
             </div>
           </nav>
         </div>
