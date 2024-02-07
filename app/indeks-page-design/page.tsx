@@ -7,7 +7,7 @@ const IndeksPageDesign = async () => {
       ? "https://bingkai.vercel.app/sitemap-0.xml"
       : "http://localhost:3000/sitemap-0.xml"
   const staticData = await fetch(url, {
-    cache: "force-cache",
+    cache: "no-store",
   })
     .then((response) => response.text())
     .then((str) => xml2js.parseStringPromise(str))
