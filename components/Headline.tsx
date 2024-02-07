@@ -28,7 +28,7 @@ const Headline = async () => {
 
           <Link
             href="#"
-            className="mt-3 flex rounded-none bg-bingkai-darkorange px-9 py-3.5 text-2xl font-extrabold text-white"
+            className="mt-3 flex rounded-none bg-bingkai-darkorange px-9 py-3.5 text-2xl font-extrabold text-white transition-all duration-300 ease-in-out hover:bg-bingkai"
           >
             Eksplor Bingkai
           </Link>

@@ -52,6 +52,7 @@ const PaginationLink = ({
         variant: isActive ? "outline" : "ghost",
         size,
       }),
+      "transition-all duration-300 ease-in-out hover:bg-bingkai-orange hover:text-white",
       className
     )}
     {...props}

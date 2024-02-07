@@ -63,7 +63,7 @@ const CardBingkai = ({
       <Link href={href}>
         <h2
           className={cn(
-            "line-clamp-2 text-balance text-base font-bold md:text-xl",
+            "line-clamp-2 text-balance text-base font-bold transition-all duration-300 group-hover:text-bingkai-darkorange md:text-xl",
             titleClass
           )}
         >
@@ -73,7 +73,7 @@ const CardBingkai = ({
       <Button
         asChild
         className={cn(
-          "inline-flex h-auto items-center gap-2 rounded-none px-2.5 py-1 text-xs md:text-sm",
+          "inline-flex h-auto items-center gap-2 rounded-none bg-bingkai px-2.5 py-1 text-xs md:text-sm",
           btnClass
         )}
       >

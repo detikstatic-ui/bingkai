@@ -5,8 +5,6 @@ import logo from "@/public/images/logo.png"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
   Sheet,
   SheetContent,
@@ -19,7 +17,6 @@ import {
 import { Icons } from "./icons"
 
 const MenuSheet = () => {
-  const currentYear = new Date().getFullYear()
   return (
     <Sheet>
       <SheetTrigger asChild>
