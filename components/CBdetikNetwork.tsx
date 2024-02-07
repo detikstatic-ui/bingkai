@@ -92,13 +92,13 @@ const CBdetikNetwork = async () => {
       <CBTitle title="detikNetwork" href="#" />
       <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-x-5 gap-y-4 sm:grid-cols-[repeat(auto-fill,minmax(245px,1fr))] sm:gap-8">
         {(await dataWithBlurred).map((data, i) => (
-          <div key={i} className="flex flex-col gap-3">
+          <div key={i} className="group flex flex-col gap-3">
             <Link
               href={data.href}
-              className="relative isolate aspect-video w-full"
+              className="relative isolate aspect-video w-full overflow-hidden"
             >
               <Image
-                className="size-full object-cover"
+                className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
                 src={data.img}
                 alt="image alt"
                 fill

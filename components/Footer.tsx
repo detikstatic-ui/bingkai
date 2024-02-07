@@ -37,7 +37,9 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={item.href}
-                    className={cn("flex items-center text-sm  text-bingkai")}
+                    className={cn(
+                      "flex items-center text-sm text-bingkai transition-all duration-300 hover:text-bingkai-darkorange"
+                    )}
                   >
                     {item.title}
                   </Link>
@@ -83,11 +85,36 @@ const Footer = () => {
           role="presentation"
           aria-hidden="true"
         />
-        <div className="flex flex-col gap-2 text-center text-sm text-bingkai sm:text-right lg:flex-row">
+        <div className="flex flex-col gap-2 text-center text-sm sm:text-right lg:flex-row">
           <div>Copyright @ {currentYear} detikevent. All right reserved.</div>
           <div>
-            <Link href="#">Kotak Pos</Link> / <Link href="#">Iklan</Link> /{" "}
-            <Link href="#">Privacy</Link> / <Link href="#">Disclaimer</Link>
+            <Link
+              href="#"
+              className="text-bingkai transition-all duration-300 hover:text-bingkai-darkorange"
+            >
+              Kotak Pos
+            </Link>{" "}
+            /{" "}
+            <Link
+              href="#"
+              className="text-bingkai transition-all duration-300 hover:text-bingkai-darkorange"
+            >
+              Iklan
+            </Link>{" "}
+            /{" "}
+            <Link
+              href="#"
+              className="text-bingkai transition-all duration-300 hover:text-bingkai-darkorange"
+            >
+              Privacy
+            </Link>{" "}
+            /{" "}
+            <Link
+              href="#"
+              className="text-bingkai transition-all duration-300 hover:text-bingkai-darkorange"
+            >
+              Disclaimer
+            </Link>
           </div>
         </div>
       </div>

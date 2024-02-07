@@ -46,28 +46,30 @@ const CardBingkai = ({
   title = "Hari Kemerdekaan ke-77",
 }: CardBingkaiProps) => {
   return (
-    <div className={cn("flex flex-col items-start gap-2.5", className)}>
+    <div className={cn("group flex flex-col items-start gap-2.5", className)}>
       <Link
         href={href}
-        className="relative isolate aspect-square w-full bg-white"
+        className="relative isolate aspect-square w-full overflow-hidden bg-white"
       >
         <Image
           src={imgSrc}
           alt={title}
-          className="w-full object-cover"
+          className="w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
           fill
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
           placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(245, 245))}`}
         />
       </Link>
-      <h2
-        className={cn(
-          "line-clamp-2 text-balance text-base font-bold md:text-xl",
-          titleClass
-        )}
-      >
-        {title}
-      </h2>
+      <Link href={href}>
+        <h2
+          className={cn(
+            "line-clamp-2 text-balance text-base font-bold md:text-xl",
+            titleClass
+          )}
+        >
+          {title}
+        </h2>
+      </Link>
       <Button
         asChild
         className={cn(
