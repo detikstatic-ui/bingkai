@@ -3,11 +3,11 @@ import withPlaiceholder from "@plaiceholder/next"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "export",
+  // output: "export",
   // basePath: "/design/static/starter-project/preview",
   // distDir: "preview",
   images: {
-    unoptimized: true,
+    // unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
