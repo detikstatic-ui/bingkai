@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -48,7 +47,7 @@ const MenuSheet = () => {
             </Link>
           ))}
         </div>
-        <SheetFooter className="flex-col">
+        <div className="flex-col">
           <div
             className="-mx-6 mb-5 h-0.5 bg-gradient-to-r from-[#ffb54c] via-[#ed131b] to-[#ffb54c]"
             role="presentation"
@@ -57,7 +56,7 @@ const MenuSheet = () => {
           <div className="flex flex-col gap-2">
             <h3 className="text-center text-xs">Connect With Us</h3>
             {siteConfig.links?.length ? (
-              <div className="flex justify-center gap-1.5">
+              <div className="flex flex-wrap justify-center gap-1.5">
                 {siteConfig.links?.map(
                   (item, index) =>
                     item.href && (
@@ -81,7 +80,7 @@ const MenuSheet = () => {
               </div>
             ) : null}
           </div>
-        </SheetFooter>
+        </div>
       </SheetContent>
     </Sheet>
   )
