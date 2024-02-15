@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils"
 
 import "swiper/css"
 import "swiper/css/effect-cards"
+import "swiper/css/navigation"
 
-import { EffectCards } from "swiper/modules"
+import { EffectCards, Navigation } from "swiper/modules"
 import { Swiper as SwiperContainer, SwiperSlide } from "swiper/react"
 
 const HeadlineCarousel = () => {
@@ -29,8 +30,9 @@ const HeadlineCarousel = () => {
   return (
     <SwiperContainer
       effect={"cards"}
+      navigation
       grabCursor={true}
-      modules={[EffectCards]}
+      modules={[EffectCards, Navigation]}
       style={{ width: "100%" }}
     >
       {carouselData.map((data, i) => (
