@@ -64,7 +64,7 @@ const MenuSheet = () => {
               <SheetClose asChild>
                 <Link
                   href="#"
-                  className="mb-3 bg-gray-100 px-3 py-2.5 text-center text-sm font-semibold text-bingkai-darkorange"
+                  className="my-3 bg-gray-100 px-3 py-2.5 text-center text-sm font-semibold text-bingkai-darkorange"
                 >
                   Daftar MPC
                 </Link>
