@@ -52,24 +52,22 @@ const Bingkai = () => {
 
   const carouselData = [
     {
-      square:
-        "https://akcdn.detik.net.id/photowall/1630984319-framedesign-square.png",
-      portrait:
-        "https://akcdn.detik.net.id/photowall/1630984325-framedesign-potrait.png",
+      square: "/images/frame-design-square.png",
+      portrait: "/images/frame-design.png",
       title: "Vaksin Covid-19",
     },
     {
       square:
-        "https://akcdn.detik.net.id/photowall/1700550637-framedesign-square.png",
+        "https://akcdn.detik.net.id/photowall/1700550637-framedesign-square.png?w=736",
       portrait:
-        "https://akcdn.detik.net.id/photowall/1700550661-framedesign-potrait.png",
+        "https://akcdn.detik.net.id/photowall/1700550661-framedesign-potrait.png?w=736",
       title: "Selamat Hari Guru",
     },
     {
       square:
-        "https://akcdn.detik.net.id/photowall/1689866290-framedesign-square.png",
+        "https://akcdn.detik.net.id/photowall/1689866290-framedesign-square.png?w=736",
       portrait:
-        "https://akcdn.detik.net.id/photowall/1689866365-framedesign-potrait.png",
+        "https://akcdn.detik.net.id/photowall/1689866365-framedesign-potrait.png?w=736",
       title: "Hari Anak Nasional 2023",
     },
   ]
@@ -269,7 +267,7 @@ const Bingkai = () => {
           >
             <div className="relative mx-auto aspect-square w-full max-w-80">
               <Image
-                src="https://akcdn.detik.net.id/photowall/1630984319-framedesign-square.png"
+                src="/images/frame-design-square.png"
                 alt="bingkai"
                 fill
                 className="z-10"

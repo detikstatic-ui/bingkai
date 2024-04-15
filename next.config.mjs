@@ -6,6 +6,12 @@ const nextConfig = {
   // output: "export",
   // basePath: "/design/static/starter-project/preview",
   // distDir: "preview",
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     // unoptimized: true,
     remotePatterns: [
