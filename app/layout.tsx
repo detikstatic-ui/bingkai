@@ -8,7 +8,8 @@ import { cn } from "@/lib/utils"
 import Footer from "@/components/Footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
+
+// import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: {
@@ -23,12 +24,12 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-}
+// export const viewport: Viewport = {
+//   themeColor: [
+//     { media: "(prefers-color-scheme: light)", color: "white" },
+//     { media: "(prefers-color-scheme: dark)", color: "black" },
+//   ],
+// }
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -45,13 +46,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <SiteHeader />
-            <div className="full-width content-grid min-h-dvh">{children}</div>
-            <Footer />
+          {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
+          <SiteHeader />
+          <div className="full-width content-grid min-h-dvh">{children}</div>
+          <Footer />
 
-            <TailwindIndicator />
-          </ThemeProvider>
+          <TailwindIndicator />
+          {/* </ThemeProvider> */}
         </body>
       </html>
     </>

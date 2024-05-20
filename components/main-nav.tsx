@@ -7,7 +7,8 @@ import logo from "@/public/images/logo.png"
 
 import { NavItem } from "@/types/nav"
 import { siteConfig } from "@/config/site"
-import { cn, useActivePath } from "@/lib/utils"
+import { useActivePath } from "@/lib/helper"
+import { cn } from "@/lib/utils"
 
 interface MainNavProps {
   items?: NavItem[]
